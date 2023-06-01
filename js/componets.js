@@ -6,4 +6,5 @@ $(function () {
   $("#filter_load").load("components/home/filterClient.html");
   $("#footer_load").load("components/footer.html");
   $("#ads_load").load("components/home/addsSlider.html");
+  $("#store_load").load("components/home/store.html");
 });

@@ -52,7 +52,6 @@ h1 {
   font-family: "Aoboshi One", serif;
 }
 
-
 .swiper-slide img,
 .big-add-img-div img,
 .slider-img-div img,
@@ -79,7 +78,7 @@ form,
   border-radius: var(--radius);
 }
 
-.footer-logo,
+.footer-logo, .all-store-grid,
 .footer-socail-media i,
 .category-store,
 .user-toggle {
@@ -88,13 +87,13 @@ form,
   align-items: center;
 }
 
-.category,
+.category, 
 .category img {
   transition: all 0.3s ease-in-out !important;
 }
 
 .filter-section,
-.ads-section,
+.ads-section, .store-section,
 .category-section,
 .slider-banner-section-head-div {
   margin-top: 75px;
@@ -268,7 +267,7 @@ form {
   font-weight: bold;
   color: var(--primery-color);
 }
-.footer-socail-media a,
+.footer-socail-media a, .all-store-grid a,
 .upper-footer-section a,
 .category-store a {
   text-decoration: none !important;
@@ -279,11 +278,102 @@ form {
   flex-wrap: wrap;
 }
 
+/* ------------------------------------ads-section-start--------------------------------------------- */
+.ads-section {
+  height: auto;
+}
+
+.swiper {
+  width: 100%;
+  height: 50vh;
+  border-radius: var(--radius);
+}
+
+.swiper-slide img {
+  display: block;
+  border-radius: var(--radius);
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: 45px !important;
+  height: 45px !important;
+  background-color: var(--body-color);
+  border-radius: 50%;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 1.5rem !important;
+  color: var(--font-color) !important;
+}
+
+
+
+/* ------------------------------------store-section-start----------------------------------------- */
+.store-section{
+  height: auto;
+}
+.all-store-grid{
+  width: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.store-grid{
+  width: 300px;
+  height: auto;
+  text-align: center;
+  padding: 8px;
+  border-radius: var(--radius);
+  margin: 10px;
+  background: linear-gradient(22deg, #bf6bff31 30%, rgba(132, 216, 252, 0.226) 69%);
+  backdrop-filter: blur(2px);
+}
+.store-grid:hover{
+  background: linear-gradient(22deg, rgba(132, 216, 252, 0.226) 30%, #bf6bff31 69%);
+
+}
+.store-grid img{
+  width: 100%;
+  height: 16vh;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.store-grid h5{
+  font-size: 15px;
+  font-family: "Aoboshi One", serif;
+  letter-spacing: 2px;
+  color: var(--font-color);
+  font-weight: bold;
+}
 /* --------------------------------filter-section-start----------------------------------- */
 .filter-section {
   border: 1px solid red;
   height: 100vh;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ----------------------------------------footer-section-start------------------------------------- */
 .footer-section {
@@ -365,30 +455,3 @@ form {
   margin-bottom: 0;
 }
 
-/* ------------------------------------ads-section-start--------------------------------------------- */
-.ads-section {
-  height: auto;
-}
-
-.swiper {
-  width: 100%;
-  height: 50vh;
-  border-radius: var(--radius);
-}
-
-.swiper-slide img {
-  display: block;
-  border-radius: var(--radius);
-}
-.swiper-button-prev,
-.swiper-button-next{
-  width: 45px !important;
-  height: 45px !important;
-  background-color: var(--body-color);
-  border-radius: 50%;
-}
-
-.swiper-button-next:after, .swiper-button-prev:after {
-  font-size: 1.5rem !important;
-  color: var(--font-color) !important;
-}
