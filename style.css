@@ -39,6 +39,7 @@ body::-webkit-scrollbar-thumb {
   --radius: 6px;
   --primery-color: #dddddd;
   --font-color: #1d2d50;
+  --light-font-color: #0188ff;
   --paragraph-color: #4c4c6d;
 }
 button {
@@ -60,7 +61,8 @@ h1 {
   width: 100%;
   object-fit: cover;
 }
-
+ 
+.sales-btn img,
 .footer-logo img,
 .category img {
   width: 100%;
@@ -78,7 +80,8 @@ form,
   border-radius: var(--radius);
 }
 
-.footer-logo, .all-store-grid,
+.footer-logo,
+.all-store-grid, .view-all,
 .footer-socail-media i,
 .category-store,
 .user-toggle {
@@ -87,20 +90,33 @@ form,
   align-items: center;
 }
 
-.category, 
+.category,
 .category img {
   transition: all 0.3s ease-in-out !important;
 }
 
 .filter-section,
-.ads-section, .store-section,
+.ads-section,
+.store-section,
 .category-section,
 .slider-banner-section-head-div {
   margin-top: 75px;
 }
 
 /*------------------------------------ navbar----------------------------- */
+.sales-btn{
+  width: 92px;
+  height: auto;
+  position: absolute;
+  top: 38px;
+  right: 212px;
+}
+.sales-btn:hover img{
+  transform: scale(1.1);
+}
+
 .bg-light {
+  position: relative;
   background-color: #000000c9 !important;
   backdrop-filter: blur(8px);
   z-index: 999 !important;
@@ -145,6 +161,7 @@ form,
 .form-control {
   border: none;
 }
+.dropdown-toggle::after,
 .user-toggle::after {
   display: none;
 }
@@ -267,7 +284,8 @@ form {
   font-weight: bold;
   color: var(--primery-color);
 }
-.footer-socail-media a, .all-store-grid a,
+.footer-socail-media a,
+.all-store-grid a,
 .upper-footer-section a,
 .category-store a {
   text-decoration: none !important;
@@ -307,73 +325,82 @@ form {
   color: var(--font-color) !important;
 }
 
-
-
 /* ------------------------------------store-section-start----------------------------------------- */
-.store-section{
+.store-section {
   height: auto;
 }
-.all-store-grid{
+.all-store-grid {
   width: auto;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.store-grid{
-  width: 300px;
+.store-grid {
+  width: 180px;
   height: auto;
   text-align: center;
   padding: 8px;
   border-radius: var(--radius);
   margin: 10px;
-  background: linear-gradient(22deg, #bf6bff31 30%, rgba(132, 216, 252, 0.226) 69%);
-  backdrop-filter: blur(2px);
+  background-color: #ffffff39;
+  /* background: linear-gradient(
+    22deg,
+    #bf6bff31 30%,
+    rgba(132, 216, 252, 0.226) 69%
+  ); */
+  backdrop-filter: blur(5px);
 }
-.store-grid:hover{
-  background: linear-gradient(22deg, rgba(132, 216, 252, 0.226) 30%, #bf6bff31 69%);
+.store-grid:hover {
+  /* background: linear-gradient(
+    22deg,
+    rgba(132, 216, 252, 0.226) 30%,
+    #bf6bff31 69%
+  ); */
+  background-color: #ffffffbb;
+  box-shadow: 0px 0px 10px -6px var(--hover-color);
+}
+.store-grid:hover img{
+  filter: grayscale(100%);
+}
 
-}
-.store-grid img{
+.store-grid img {
   width: 100%;
-  height: 16vh;
+  height: 12vh;
   object-fit: contain;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
   padding: 1rem;
+  filter: grayscale(0%);
 }
-.store-grid h5{
-  font-size: 15px;
+.view-all{
+  height: 24.2vh;
+  background: var(--body-color) !important;
+}
+.view-all:hover{
+  background-color: var(--hover-color) !important;
+}
+.view-all:hover h6{
+  color: var(--body-color) !important;
+}
+.view-all h6{
+  color: var(--light-font-color);
+  font-size: 14px;
+}
+.store-grid p{
+  margin-bottom: 10px;
+  color: var(--light-font-color);
+}
+.store-grid h5 {
+  font-size: 14px;
   font-family: "Aoboshi One", serif;
   letter-spacing: 2px;
   color: var(--font-color);
   font-weight: bold;
 }
+
 /* --------------------------------filter-section-start----------------------------------- */
 .filter-section {
   border: 1px solid red;
   height: 100vh;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ----------------------------------------footer-section-start------------------------------------- */
 .footer-section {
@@ -383,7 +410,7 @@ form {
   position: relative;
 }
 .upper-footer-section {
-  width: 95%;
+  width: 93%;
   position: absolute;
   top: -5rem;
   left: 50%;
@@ -454,4 +481,3 @@ form {
   color: var(--body-color);
   margin-bottom: 0;
 }
-
