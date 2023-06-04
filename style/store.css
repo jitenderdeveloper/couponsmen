@@ -1,0 +1,218 @@
+
+.store-section {
+  height: auto;
+}
+.client-banner {
+  width: 100%;
+  height: 50vh;
+}
+.client-banner img {
+  border-radius: var(--radius);
+}
+
+/* -----------------store-filter-section-------------------- */
+.store-filter-section {
+  height: auto;
+}
+.filter-slider {
+  width: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.auto-slider {
+  width: 200px;
+  height: auto;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  margin: 10px;
+  border-radius: var(--radius);
+}
+.auto-slider h5 {
+  font-size: 2.5rem;
+  color: var(--font-color);
+  margin-bottom: 0;
+  color: var(--primery-color);
+}
+.auto-slider h6 {
+  font-size: 12px;
+  color: var(--primery-color);
+}
+
+/* -------------------coupons-section------------------------- */
+.coupons-section {
+  height: auto;
+  padding: 1.6rem;
+  background-color: #f4f6f662;
+  backdrop-filter: blur(2px);
+  border-radius: var(--radius);
+}
+.heading-section h5 {
+  font-size: 26px;
+  margin-bottom: 0;
+  position: relative;
+  padding-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: "Aoboshi One", serif !important;
+}
+.heading-section h5::before {
+  content: "";
+  width: 100%;
+  background-color: var(--font-color);
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.store-grid-section {
+  width: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/* .coupons-grid-section {
+  width: auto;
+  height: 30vh;
+  border: 1px solid red;
+  margin: 10px;
+  border-radius: var(--radius);
+  padding: 10px;
+  background: linear-gradient(22deg, #c16bff94 30%, #65ffff93 69%);
+} */
+.ex-coupons{
+  background: linear-gradient(135deg, #ff24f4, #1daeb0) !important;
+}
+.coupon-card {
+  width: 400px;
+  background: linear-gradient(135deg, #7158fe, #9d4de6);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
+  margin: 10px;
+}
+.logo {
+  width: 80px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.coupon-card h3 {
+  font-size: 17px;
+  font-weight: 400;
+}
+.coupon-card p {
+  font-size: 15px;
+}
+.coupon-row {
+  display: flex;
+  align-items: center;
+  margin: 25px auto;
+  width: fit-content;
+}
+#cpnCode {
+  border: 1px dashed #fff;
+  padding: 10px;
+  border-right: 0;
+  font-size: 14px;
+}
+#cpnBtn {
+  border: 1px solid #fff;
+  background: #fff;
+  font-size: 14px;
+  padding: 10px;
+  color: #7158fe;
+  cursor: pointer;
+}
+.circle1,
+.circle2 {
+  background: #f4f6f6;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.circle1 {
+  left: -25px;
+}
+.circle2 {
+  right: -25px;
+}
+
+/* ----------------------product-grid-section----------------------- */
+.prduct-grid-section {
+  width: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.product-grid {
+  width: 230px;
+  height: auto;
+  margin: 11px;
+  background-color: var(--body-color);
+  border-radius: var(--radius);
+  padding: 10px;
+  box-shadow: 0px 0px 10px -4px var(--hover-color);
+}
+.product-img {
+  width: 100%;
+  height: 30vh;
+  background-color: #fff;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.product-img img {
+  padding: 6px;
+}
+.product-content {
+  width: 95%;
+  padding: 5px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+.product-content h4 {
+  font-size: 13px;
+}
+.product-content h5 {
+  font-size: 12px;
+}
+.product-content h6 {
+  font-size: 12px;
+  margin: 0 2px;
+  color: var(--font-color);
+}
+.product-content h6:nth-child(1) {
+  color: gray;
+}
+.product-content h6:nth-child(1) span {
+  font-size: 11px;
+}
+.product-rate h6 {
+  margin-bottom: 0;
+}
+.product-button {
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 4px;
+  margin-top: 10px;
+}
+.product-button a {
+  width: 48%;
+  text-align: center;
+  height: 4vh;
+  text-decoration: none;
+  margin-bottom: 0;
+  background-color: var(--primery-color);
+  color: var(--font-color);
+  border-radius: 0 0 var(--radius) var(--radius);
+  transition: all 0.4s ease-in-out;
+}
+.product-button a:nth-child(1):hover {
+  background-color: var(--light-font-color);
+}
+.product-button a:hover {
+  background-color: var(--hover-color);
+  color: var(--body-color);
+}

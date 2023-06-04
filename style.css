@@ -49,10 +49,18 @@ button {
 a {
   font-size: 12px !important;
 }
+
+.auto-slider h5, .auto-slider h6,
+.blog-grid-title h2,
+.store-grid h5,
+.offer-grids h5,
+.offer-grids h6,
+.overLayer h6,
 h1 {
-  font-family: "Aoboshi One", serif;
+  font-family: "Aoboshi One", serif !important;
 }
 
+.client-banner img,
 .swiper-slide img,
 .big-add-img-div img,
 .slider-img-div img,
@@ -61,7 +69,8 @@ h1 {
   width: 100%;
   object-fit: cover;
 }
- 
+
+.product-img img,
 .sales-btn img,
 .footer-logo img,
 .category img {
@@ -80,8 +89,11 @@ form,
   border-radius: var(--radius);
 }
 
-.footer-logo,
-.all-store-grid, .view-all,
+.footer-logo, .filter-slider,
+.offer-grids, .prduct-grid-section,
+.all-store-grid, .auto-slider,
+.offers-grid, .product-button a,
+.view-all, .store-grid-section,
 .footer-socail-media i,
 .category-store,
 .user-toggle {
@@ -95,23 +107,34 @@ form,
   transition: all 0.3s ease-in-out !important;
 }
 
-.filter-section,
+.filter-section, .store-filter-section,
 .ads-section,
 .store-section,
-.category-section,
+.offers-section,
+.category-section, .coupons-section,
 .slider-banner-section-head-div {
   margin-top: 75px;
 }
 
+
+.filter-slider a,
+.footer-socail-media a,
+.all-store-grid a,
+.upper-footer-section a,
+.offers-grid a,
+.category-store a {
+  text-decoration: none !important;
+}
+
 /*------------------------------------ navbar----------------------------- */
-.sales-btn{
+.sales-btn {
   width: 92px;
   height: auto;
   position: absolute;
   top: 38px;
   right: 212px;
 }
-.sales-btn:hover img{
+.sales-btn:hover img {
   transform: scale(1.1);
 }
 
@@ -284,12 +307,7 @@ form {
   font-weight: bold;
   color: var(--primery-color);
 }
-.footer-socail-media a,
-.all-store-grid a,
-.upper-footer-section a,
-.category-store a {
-  text-decoration: none !important;
-}
+
 .category-store {
   width: auto;
   flex-direction: row;
@@ -342,24 +360,13 @@ form {
   border-radius: var(--radius);
   margin: 10px;
   background-color: #ffffff39;
-  /* background: linear-gradient(
-    22deg,
-    #bf6bff31 30%,
-    rgba(132, 216, 252, 0.226) 69%
-  ); */
   backdrop-filter: blur(5px);
-}
-.store-grid:hover {
-  /* background: linear-gradient(
-    22deg,
-    rgba(132, 216, 252, 0.226) 30%,
-    #bf6bff31 69%
-  ); */
-  background-color: #ffffffbb;
   box-shadow: 0px 0px 10px -6px var(--hover-color);
+  background-color: #ffffffbb;
 }
-.store-grid:hover img{
-  filter: grayscale(100%);
+
+.store-grid:hover img {
+  filter: grayscale(0%);
 }
 
 .store-grid img {
@@ -368,32 +375,99 @@ form {
   object-fit: contain;
   margin-bottom: 10px;
   padding: 1rem;
-  filter: grayscale(0%);
+  filter: grayscale(100%);
 }
-.view-all{
+.view-all {
   height: 24.2vh;
   background: var(--body-color) !important;
 }
-.view-all:hover{
+.view-all:hover {
   background-color: var(--hover-color) !important;
 }
-.view-all:hover h6{
+.view-all:hover h6 {
   color: var(--body-color) !important;
 }
-.view-all h6{
+.view-all h6 {
   color: var(--light-font-color);
   font-size: 14px;
 }
-.store-grid p{
-  margin-bottom: 10px;
-  color: var(--light-font-color);
+.store-grid p {
+  margin-bottom: 3px;
+  color: var(--body-color);
+  background-color: var(--bg-color);
+  border-radius: 0 0 var(--radius) var(--radius);
 }
 .store-grid h5 {
   font-size: 14px;
-  font-family: "Aoboshi One", serif;
   letter-spacing: 2px;
   color: var(--font-color);
   font-weight: bold;
+}
+
+/* ---------------------------------offers-section-start-------------------------------- */
+.offers-section {
+  height: auto;
+}
+
+.offers-grid {
+  width: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.offer-grids {
+  width: 160px;
+  height: 30vh;
+  flex-direction: column;
+  margin: 10px;
+  border-radius: var(--radius);
+  background-color: rgb(128, 0, 0);
+  color: var(--body-color);
+  position: relative;
+  overflow: hidden;
+}
+/* .bg-color:nth-child(2) .offer-grids{
+  background: linear-gradient(22deg, #ff4a4a 30%, rgb(153, 29, 255) 69%);
+} */
+.offer-grids:hover .overLayer {
+  top: 0px;
+  visibility: visible;
+  opacity: 1;
+}
+.overLayer {
+  background-color: #000000b4;
+  backdrop-filter: blur(5px);
+  position: absolute;
+  top: 50px;
+  visibility: hidden;
+  opacity: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.overLayer h6 {
+  text-align: center;
+  border-bottom: 1px solid red;
+  padding-bottom: 6px;
+}
+.overLayer ul {
+  padding-left: 0;
+  text-align: center;
+}
+.overLayer ul li {
+  list-style: none !important;
+  margin-bottom: 6px;
+}
+.offer-grids h5 {
+  font-weight: bold;
+  font-family: var(--font);
+  font-size: 4rem;
+}
+.offer-grids h6 {
+  font-family: var(--font);
+  font-size: 14px;
 }
 
 /* --------------------------------filter-section-start----------------------------------- */
@@ -432,7 +506,6 @@ form {
   font-size: 2.5rem;
   letter-spacing: 5px;
   font-weight: bold;
-  font-family: "Aoboshi One", serif;
   color: var(--body-color);
 }
 .blog-grid-title h5 {

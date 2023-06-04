@@ -1,0 +1,110 @@
+<div class="container coupons-section">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-12 mb-5">
+      <div class="heading-section">
+        <h5>COUPONS</h5>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-12">
+      <div class="store-grid-section">
+        <div class="coupon-card">
+          <!-- <img src="https://i.postimg.cc/KvTqpZq9/uber.png" class="logo" /> -->
+          <h3>
+            20% flat off on all rides within the city<br />using HDFC Credit
+            Card
+          </h3>
+          <di class="coupon-row">
+            <span id="cpnCode">STEALDEAL20</span>
+            <span id="cpnBtn">Copy Code</span>
+          </di>
+          <p>Valid Till: 20Dec, 2021</p>
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+        </div>
+        <div class="coupon-card">
+          <!-- <img src="https://i.postimg.cc/KvTqpZq9/uber.png" class="logo" /> -->
+          <h3>
+            20% flat off on all rides within the city<br />using HDFC Credit
+            Card
+          </h3>
+          <di class="coupon-row">
+            <span id="cpnCode">AMAZON200</span>
+            <span id="cpnBtn">Copy Code</span>
+          </di>
+          <p>Valid Till: 20Dec, 2021</p>
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+        </div>
+        <div class="coupon-card">
+          <!-- <img src="https://i.postimg.cc/KvTqpZq9/uber.png" class="logo" /> -->
+          <h3>
+            20% flat off on all rides within the city<br />using HDFC Credit
+            Card
+          </h3>
+          <di class="coupon-row">
+            <span id="cpnCode">FLIPKART20</span>
+            <span id="cpnBtn">Copy Code</span>
+          </di>
+          <p>Valid Till: 20Dec, 2021</p>
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+        </div>
+        <div class="coupon-card">
+          <!-- <img src="https://i.postimg.cc/KvTqpZq9/uber.png" class="logo" /> -->
+          <h3>
+            20% flat off on all rides within the city<br />using HDFC Credit
+            Card
+          </h3>
+          <di class="coupon-row">
+            <span id="cpnCode">MYNTRANEW10</span>
+            <span id="cpnBtn">Copy Code</span>
+          </di>
+          <p>Valid Till: 20Dec, 2021</p>
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+        </div>
+        <div class="coupon-card">
+          <!-- <img src="https://i.postimg.cc/KvTqpZq9/uber.png" class="logo" /> -->
+          <h3>
+            20% flat off on all rides within the city<br />using HDFC Credit
+            Card
+          </h3>
+          <di class="coupon-row">
+            <span id="cpnCode">DOMINOS200</span>
+            <span id="cpnBtn">Copy Code</span>
+          </di>
+          <p>Valid Till: 20Dec, 2021</p>
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+        </div>
+        <div class="coupon-card">
+          <!-- <img src="https://i.postimg.cc/KvTqpZq9/uber.png" class="logo" /> -->
+          <h3>
+            20% flat off on all rides within the city<br />using HDFC Credit
+            Card
+          </h3>
+          <di class="coupon-row">
+            <span id="cpnCode">APPLE3000</span>
+            <span id="cpnBtn">Copy Code</span>
+          </di>
+          <p>Valid Till: 20Dec, 2021</p>
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var cpnBtn = document.getElementById("cpnBtn");
+  var cpnCode = document.getElementById("cpnCode");
+
+  cpnBtn.onclick = function () {
+    navigator.clipboard.writeText(cpnCode.innerHTML);
+    cpnBtn.innerHTML = "COPIED";
+    setTimeout(function () {
+      cpnBtn.innerHTML = "COPY CODE";
+    }, 2000);
+  };
+</script>
